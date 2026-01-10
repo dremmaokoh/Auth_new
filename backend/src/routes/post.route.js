@@ -1,0 +1,17 @@
+import { Router } from 'express';
+import {
+  createPost,
+  getAllPosts,
+  updatePost,
+  deletePost
+} from '../controllers/post.controller.js';
+
+const router = Router();
+// Define post-related routes here
+
+router.route('/create').post(createPost);
+router.route('/getPosts').get(getAllPosts);
+router.route('/update/:id').patch(updatePost);
+router.route('/delete/:id').delete(deletePost);
+
+export default router;

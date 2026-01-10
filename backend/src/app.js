@@ -7,11 +7,12 @@ app.use(express.json());
 
 //routes import
 import userRouter from './routes/user.route.js';
-// import postRouter from './routes/post.route.js';
+import postRouter from './routes/post.route.js';
 
 //routes middleware
 app.use('/api/v1/users', userRouter);
-// app.listen('/api/v1/posts', postRouter);
+app.use('/api/v1/posts', postRouter);
+
 
 //example route: http://localhost:8000/api/v1/users/register
 
